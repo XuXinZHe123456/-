@@ -7,12 +7,13 @@ public class Student {
     private BigDecimal initialAmount = new BigDecimal("20.00");//初始金额
     private String stuGrade;//学生的年级
     private String stuClass;//学生的班级
-    private CardState cardState;
+    private CardState cardState;//卡状态
+    private int stuNum;//班级学生人数
 
     public Student() {}
     public Student(String schoolName,
                    String stuName, String stuID, BigDecimal initialAmount,
-                   String stuGrade, String stuClass,  CardState cardStatus)
+                   String stuGrade, String stuClass,  CardState cardStatus, int stuNum)
     {
         this.schoolName = schoolName;
         this.stuName = stuName;
@@ -21,6 +22,7 @@ public class Student {
         this.stuGrade = stuGrade;
         this.stuClass = stuClass;
         this.cardState = cardStatus;
+        this.stuNum = stuNum;
     }
 
     //schoolName
@@ -30,6 +32,8 @@ public class Student {
     public void setSchoolName(String schoolName) {
         this.schoolName = schoolName;
     }
+
+
 
 
     //stuName
@@ -72,5 +76,8 @@ public class Student {
     public String getCardStatus() { return cardState.toString(); }
     public void setCardStatus(CardState cardStatus) {this.cardState = cardStatus;}
 
+    //stuNum
 
+    public int getStuNum() {return stuNum;}
+    public void setStuNum(int stuNum) {this.stuNum = stuNum;}
 }
